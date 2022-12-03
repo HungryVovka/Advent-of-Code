@@ -28,7 +28,7 @@ def rucksack_check(r_1, r_2, r_3 = []):
 
 rucksack_reorg_1 = 0
 for rucksack in rucksacks:
-    index = round(len(rucksack) / 2)
+    index = len(rucksack) // 2
     rucksack_reorg_1 += rucksack_check(rucksack[:index], rucksack[index:])
 
 rucksack_reorg_2 = 0
