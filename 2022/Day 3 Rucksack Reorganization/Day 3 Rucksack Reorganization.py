@@ -11,7 +11,6 @@ numbers_of_letters = {
     "V" : 48, "W" : 49, "X" : 50, "Y" : 51, "Z" : 52
 }
 
-
 rucksacks = [i.strip() for i in open(pathlib.Path("input.txt"), "r").read().splitlines()]
 
 def rucksack_check(r_1, r_2, r_3 = []):
