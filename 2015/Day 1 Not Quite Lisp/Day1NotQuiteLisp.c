@@ -3,12 +3,15 @@
    Part 1 -> answer1.txt
    Part 2 -> answer2.txt
 
-   RU: Первая функция считает итоговый этаж и пишет в answer1.txt.
-       Вторая функция ищет первую позицию входа в подвал (-1) и пишет
-       в answer2.txt.
-   IT: La prima funzione calcola il piano finale e scrive in answer1.txt.
-       La seconda funzione trova la prima posizione del seminterrato (-1)
-       e scrive in answer2.txt.
+   - Часть 1: Определяем итоговый этаж Санты после выполнения всех шагов.
+     Скобка "(" = подняться на один этаж, ")" = спуститься на один этаж.
+   - Часть 2: Находим первую позицию символа, после которого Санта впервые
+     оказывается в подвале (этаж -1).
+
+   - Parte 1: Determiniamo il piano finale di Babbo Natale dopo tutti i passi.
+     "(" = salire di un piano, ")" = scendere di un piano.
+   - Parte 2: Troviamo la prima posizione del carattere dopo la quale Babbo
+     Natale si trova per la prima volta nel seminterrato (piano -1).
    ======================================================================= */
 
 #include <stdio.h>    /* fopen, fclose, fgetc, fprintf, printf, puts    */
@@ -18,8 +21,8 @@
   #include <windows.h> /* SetConsoleOutputCP, SetConsoleCP              */
 #endif
 
-/* RU: Переключаем консоль на UTF-8 (Windows). */
-/* IT: Impostiamo la console su UTF-8 (Windows). */
+/* Переключаем консоль на UTF-8 (Windows). */
+/* Impostiamo la console su UTF-8 (Windows). */
 static void set_utf8_console(void){
 #ifdef _WIN32
     SetConsoleOutputCP(65001); /* CP_UTF8 */
@@ -27,8 +30,8 @@ static void set_utf8_console(void){
 #endif
 }
 
-/* RU: Печатаем линию для рамки. */
-/* IT: Stampa una riga di cornice. */
+/* Печатаем линию для рамки. */
+/* Stampa una riga di cornice. */
 static void print_line(char c, int w){
     int i;
     for (i = 0; i < w; ++i) putchar(c);
@@ -37,8 +40,8 @@ static void print_line(char c, int w){
 
 /* =======================================================================
    Part 1
-   RU: Считаем итоговый этаж, пишем в answer1.txt.
-   IT: Calcoliamo il piano finale, scriviamo in answer1.txt.
+   Считаем итоговый этаж, пишем в answer1.txt.
+   Calcoliamo il piano finale, scriviamo in answer1.txt.
    ======================================================================= */
 static void solve_part1(void){
     const char *input_filename = "input.txt";
@@ -77,8 +80,8 @@ static void solve_part1(void){
 }
 /* =======================================================================
    Part 2
-   RU: Ищем первую позицию, где этаж = -1, пишем в answer2.txt.
-   IT: Troviamo la prima posizione in cui il piano = -1, scriviamo in answer2.txt.
+   Ищем первую позицию, где этаж = -1, пишем в answer2.txt.
+   Troviamo la prima posizione in cui il piano = -1, scriviamo in answer2.txt.
    ======================================================================= */
 static void solve_part2(void){
     const char *input_filename = "input.txt";
